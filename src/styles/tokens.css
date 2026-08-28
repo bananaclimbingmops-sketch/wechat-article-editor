@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --color-brand-yellow: #ffda2a;
+  --color-brand-yellow-rgb: 255, 218, 42;
+  --color-brand-yellow-hover: #f2ca00;
+  --color-brand-brown: #895421;
+  --color-brand-brown-rgb: 137, 84, 33;
+  --color-brand-orange: #f98435;
+  --color-brand-orange-rgb: 249, 132, 53;
+  --color-brand-cream: #fff6e0;
+  --color-brand-cream-rgb: 255, 246, 224;
+  --color-brand-teal: #84ccc9;
+  --color-brand-teal-rgb: 132, 204, 201;
+
+  --color-bg-app: #f4f1ea;
+  --color-bg-app-rgb: 244, 241, 234;
+  --color-bg-panel: #ffffff;
+  --color-bg-panel-rgb: 255, 255, 255;
+  --color-bg-subtle: #faf8f3;
+  --color-bg-subtle-rgb: 250, 248, 243;
+  --color-bg-code: #25211d;
+  --color-bg-code-rgb: 37, 33, 29;
+
+  --color-text-primary: #2d241c;
+  --color-text-primary-rgb: 45, 36, 28;
+  --color-text-secondary: #6f655b;
+  --color-text-secondary-rgb: 111, 101, 91;
+  --color-text-tertiary: #9a9087;
+  --color-text-tertiary-rgb: 154, 144, 135;
+  --color-border: #e5dfd5;
+  --color-border-rgb: 229, 223, 213;
+  --color-border-strong: #cfc5b7;
+  --color-border-strong-rgb: 207, 197, 183;
+
+  --color-success: #2f8a66;
+  --color-success-rgb: 47, 138, 102;
+  --color-success-bg: #eef8f3;
+  --color-warning: #d86f28;
+  --color-warning-rgb: 216, 111, 40;
+  --color-warning-bg: #fff5e9;
+  --color-danger: #c94747;
+  --color-danger-rgb: 201, 71, 71;
+  --color-danger-bg: #fff1f1;
+  --color-info: #367fa8;
+  --color-info-rgb: 54, 127, 168;
+  --color-info-bg: #edf7fc;
+  --color-focus: #6c4a25;
+  --color-focus-rgb: 108, 74, 37;
+
+  --font-sans: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-ui-latin: 'Inter', 'Noto Sans SC', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 1px 2px rgba(var(--color-text-primary-rgb), 0.06), 0 8px 24px rgba(var(--color-text-primary-rgb), 0.05);
+  --shadow-float: 4px 5px 0 rgba(var(--color-brand-brown-rgb), 0.16);
+  --shadow-dialog: 0 24px 80px rgba(var(--color-text-primary-rgb), 0.18);
+  --focus-ring: 0 0 0 3px rgba(var(--color-focus-rgb), 0.18);
+
+  --duration-fast: 120ms;
+  --duration-base: 180ms;
+  --duration-slow: 260ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-enter: cubic-bezier(0.16, 1, 0.3, 1);
+}

@@ -1,0 +1,170 @@
+import { extractArticleText, type ArticleBlock, type ArticleDocument } from '../domain/article';
+
+const blocks: ArticleBlock[] = [
+  {
+    id: 'hero-hangzhou-referral',
+    type: 'hero',
+    eyebrow: '',
+    title: '【杭州地区】\n开学季转介绍活动\n带朋友来攀岩，\n你们各得1节课！',
+  },
+  {
+    id: 'intro-hangzhou-referral',
+    type: 'paragraph',
+    text: '新学期，除了回到熟悉的课堂，也可以和朋友一起回到岩壁。\n一起攀岩、一起进步，让新学期多一点陪伴，也多一点向上的动力。',
+    promotion: {
+      period: '8月26日—9月16日 · 限时活动',
+      products: '杭州地区青少年指定课包',
+      offer: '老学员 +1节｜新学员 +1节',
+    },
+    note: '*转介绍成功后，双方各获赠1节相应课包课程；本活动不可与免费体验课活动叠加。',
+  },
+  {
+    id: 'image-hangzhou-referral-opening',
+    type: 'image',
+    src: '/assets/k11/camp-friends.jpg',
+    alt: '孩子们在攀岩馆与伙伴交流',
+    caption: '和朋友一起走进岩馆，让新学期多一份陪伴与动力',
+  },
+  {
+    id: 'heading-hangzhou-offer',
+    type: 'sectionTitle',
+    text: '转介绍成功，双方各得1节',
+    tone: 'yellow',
+  },
+  {
+    id: 'facts-hangzhou-offer',
+    type: 'facts',
+    items: [
+      { label: '活动时间', value: '8月26日—9月16日' },
+      { label: '参与区域', value: '香蕉攀岩杭州地区指定门店' },
+      { label: '活动对象', value: '青少年指定课包的新老学员' },
+    ],
+  },
+  {
+    id: 'callout-hangzhou-main-offer',
+    type: 'callout',
+    title: '老学员 +1节｜新学员 +1节',
+    text: '老学员成功转介绍新学员参加活动，老学员与新学员各获赠1节相应课包课程。\n你带朋友认识攀岩，我们为你们各加1节课。',
+    tone: 'yellow',
+  },
+  {
+    id: 'callout-hangzhou-no-stack',
+    type: 'callout',
+    title: '优惠不可叠加',
+    text: '本次转介绍活动不可与免费体验课活动叠加使用。',
+    tone: 'orange',
+  },
+  {
+    id: 'heading-hangzhou-stores',
+    type: 'sectionTitle',
+    text: '参与门店及适用课包',
+    tone: 'teal',
+  },
+  {
+    id: 'store-hangzhou-xixi',
+    type: 'callout',
+    title: '西溪天街店',
+    text: '青少年10节团课包\n青少年20节团课包\n青少年10节私教课',
+    tone: 'blue',
+  },
+  {
+    id: 'store-hangzhou-aoti',
+    type: 'callout',
+    title: '奥体印象城店',
+    text: '青少年10节团课包\n青少年20节团课包\n青少年10节私教课',
+    tone: 'green',
+  },
+  {
+    id: 'store-hangzhou-raffles',
+    type: 'callout',
+    title: '来福士店',
+    text: '青少年10节私教课',
+    tone: 'orange',
+  },
+  {
+    id: 'store-hangzhou-note',
+    type: 'paragraph',
+    text: '不同门店参与活动的课包范围有所不同，选择课包前请先向对应门店确认。',
+  },
+  {
+    id: 'image-hangzhou-coach',
+    type: 'image',
+    src: '/assets/k11/coach-guidance.jpg',
+    alt: '教练在攀岩墙边指导孩子训练',
+    caption: '在教练的保护和指导下，把每一次尝试变成看得见的进步',
+  },
+  {
+    id: 'heading-hangzhou-how-to',
+    type: 'sectionTitle',
+    text: '如何参与',
+    tone: 'yellow',
+  },
+  {
+    id: 'how-to-hangzhou',
+    type: 'notice',
+    title: '三步参与转介绍活动',
+    items: [
+      '老学员邀请新学员前往参与活动的门店咨询。',
+      '新学员选择该门店参与活动的青少年课包。',
+      '转介绍成功后，老学员与新学员各获赠1节相应课包课程。',
+    ],
+  },
+  {
+    id: 'image-hangzhou-class',
+    type: 'image',
+    src: '/assets/k11/class-briefing.jpg',
+    alt: '教练为青少年学员讲解攀岩课程',
+    caption: '有人并肩、彼此鼓励，训练也会多一份坚持下去的动力',
+  },
+  {
+    id: 'heading-hangzhou-terms',
+    type: 'sectionTitle',
+    text: '活动须知',
+    tone: 'red',
+  },
+  {
+    id: 'terms-hangzhou-referral',
+    type: 'notice',
+    title: '参与活动前请确认以下规则',
+    items: [
+      '活动时间为8月26日至9月16日。',
+      '活动仅适用于上述参与门店及指定青少年课包。',
+      '转介绍成功后，老学员与新学员各获赠1节相应课包课程。',
+      '本活动不可与免费体验课活动叠加使用。',
+      '如发生退费，活动赠送课时须一并退还；具体处理方式以参与门店课包协议及实际说明为准。',
+      '转介绍成功的认定、赠送课时的发放、有效期、预约及使用规则，以参与门店实际说明为准。',
+      '其他未尽事宜，请咨询参与活动的门店。',
+    ],
+  },
+  {
+    id: 'closing-hangzhou-referral',
+    type: 'callout',
+    title: '新学期，一起向上',
+    text: '有朋友同行，第一次尝试会少一点紧张；有人并肩，长期训练也会多一份动力。\n这个开学季，带朋友一起来攀岩。转介绍成功，你们各得1节课！\n详情请咨询香蕉攀岩杭州地区参与门店。',
+    tone: 'yellow',
+  },
+  {
+    id: 'image-hangzhou-family',
+    type: 'image',
+    src: '/assets/k11/family-support.jpg',
+    alt: '家长陪伴孩子参加攀岩活动',
+    caption: '每一次向上，都有伙伴与家人的关注和陪伴',
+  },
+  {
+    id: 'signature-hangzhou-referral',
+    type: 'paragraph',
+    text: 'Banana Climbing Hangzhou\n新学期，和朋友向上见！',
+  },
+];
+
+export const hangzhouReferralArticle: ArticleDocument = {
+  id: 'hangzhou-school-season-referral-2026',
+  title: '杭州地区开学季转介绍活动',
+  sourceText: extractArticleText(blocks),
+  blocks,
+  metadata: {
+    accountName: '香蕉攀岩 BananaClimbing',
+    publishedLabel: '草稿',
+    category: '开学季专栏',
+  },
+};
