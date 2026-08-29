@@ -429,9 +429,9 @@ export default function App() {
   };
 
   const updateSourceBaseline = () => {
-    if (!window.confirm('确认把当前可见文字设为新的原文基线吗？之后将以当前内容检查增删和调序。')) return;
+    if (!window.confirm('确认把当前可见文字设为模板吗？之后将以当前内容检查增删和调序。')) return;
     commitArticle((current) => ({ ...current, sourceText: extractArticleText(current.blocks) }));
-    setToast('原文基线已更新');
+    setToast('模板已更新');
   };
 
   const copyHtml = async () => {
@@ -549,7 +549,7 @@ export default function App() {
           </div>
           <div className="workspace-heading-actions">
             <button className="button secondary tablet-preview-trigger" onClick={() => { setInspectorTab('preview'); setMobilePanel('preview'); }}><Smartphone aria-hidden="true" />打开预览</button>
-            <button className="button secondary baseline-button" onClick={updateSourceBaseline}>设为新原文基线</button>
+            <button className="button secondary baseline-button" onClick={updateSourceBaseline}>设为模板</button>
           </div>
         </div>
         <EditorCanvas
@@ -623,7 +623,7 @@ export default function App() {
               ))}
             </div>
             <div className="validation-actions">
-              <button className="button secondary" onClick={updateSourceBaseline}>更新原文基线</button>
+              <button className="button secondary" onClick={updateSourceBaseline}>更新模板</button>
               <button className="button primary" onClick={copyHtml} disabled={!report.canExportSafely}><Clipboard aria-hidden="true" />复制微信 HTML</button>
             </div>
           </div>

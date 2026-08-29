@@ -463,7 +463,7 @@
   .workspace-heading-actions { gap: 5px; }
   .tablet-preview-trigger { display: none; }
   .workspace-heading .baseline-button { min-width: 44px; width: 44px; padding: 0; overflow: hidden; color: var(--color-text-primary); font-size: 0; }
-  .workspace-heading .baseline-button::after { color: var(--color-text-primary); content: '基线'; font-size: 10px; }
+  .workspace-heading .baseline-button::after { color: var(--color-text-primary); content: '模板'; font-size: 10px; }
   .editor-block-header { align-items: flex-start; }
   .editor-block-actions { opacity: 1; }
   .editor-block-actions .icon-button { width: 34px; height: 34px; }
